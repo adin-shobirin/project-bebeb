@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <title>Accordion</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center m-5">Contoh Accordion (Flush)</h1>
+    <h2 class="mt-5 mb-3">Pada contoh ini, item pada list pertama dari accordion tidak di tampilkan secara default</h2>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Konten placeholder untuk accordion ini, yang dimaksudkan untuk mendemonstrasikan kelas <code>.accordion-flush</code>. Ini adalah body accordion item pertama.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Konten placeholder untuk accordion ini, yang dimaksudkan untuk mendemonstrasikan kelas <code>.accordion-flush</code>. Ini adalah body accordion item kedua.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Konten placeholder untuk accordion ini, yang dimaksudkan untuk mendemonstrasikan kelas <code>.accordion-flush</code>. Ini adalah body accordion item ketiga. Tidak ada yang lebih menarik terjadi di sini dalam hal konten, tetapi hanya mengisi ruang agar terlihat, setidaknya pada pandangan pertama, sedikit lebih mewakili bagaimana ini akan terlihat dalam aplikasi dunia nyata.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

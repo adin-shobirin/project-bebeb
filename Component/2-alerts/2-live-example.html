@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <title>Alerts</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="text-center m-5">Contoh Penggunaan Alerts</h1>
+    <h2 class="mt-5 mb-3">Menampilkan Alert secara langsung dengan tambahan JavaScript</h2>
+
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Tampilkan Alert</button>  
+  </div>
+
+
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    
+    <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+      }
+
+      const alertTrigger = document.getElementById('liveAlertBtn')
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          appendAlert('Keren, kamu berhasil menampilkan alert menggunakan Bootstrap 5 dan bantuan JavaScript', 'success')
+        })
+      }
+    </script>
+</body>
+</html>

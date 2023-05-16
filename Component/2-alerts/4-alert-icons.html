@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <title>Alerts</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="text-center m-5">Contoh Penggunaan Alerts</h1>
+    <h2 class="mt-5 mb-3">Contoh Penggunaan alert (success) dengan icon</h2>
+
+    <!-- Code alert -->
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Tampilkan Alert</button> <br><br>
+  </div>
+
+  <br><br><br>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    
+    <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible d-flex align-items-center" role="alert">`,
+          `   <img src="./img/check-icon.png" width="25px" class="m-3" alt="">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="position: absolute; left: calc(100% - 60px); margin-top:16px"></button>',
+          '</div></div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+      }
+
+      const alertTrigger = document.getElementById('liveAlertBtn')
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          appendAlert('Alert sukses tampil dengan icon', 'success')
+        })
+      }
+    </script>
+</body>
+</html>
